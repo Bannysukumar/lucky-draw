@@ -2,7 +2,17 @@
 
 A decentralized lucky draw application built on the BNB Chain (BEP-20) that allows users to participate in a lottery by paying a fixed amount of BNB or tokens. The winner is selected randomly using Chainlink VRF for true randomness.
 
+[![License](https://img.shields.io/github/license/Bannysukumar/lucky-draw)](https://github.com/Bannysukumar/lucky-draw/blob/main/LICENSE) [![Stars](https://img.shields.io/github/stars/Bannysukumar/lucky-draw)](https://github.com/Bannysukumar/lucky-draw/stargazers) [![Last commit](https://img.shields.io/github/last-commit/Bannysukumar/lucky-draw)](https://github.com/Bannysukumar/lucky-draw/commits/main)
+
+## Overview
+
+A decentralized lucky draw application built on the BNB Chain (BEP-20) that allows users to participate in a lottery by paying a fixed amount of BNB or tokens. The winner is selected randomly using Chainlink VRF for true randomness.
+
+
+What is actually in the repository: `contracts/LuckyDraw.sol`, `contracts/`, `src/`. GitHub reports the primary language as JavaScript.
+
 ## Features
+
 
 - Connect MetaMask wallet
 - Enter lucky draw with fixed BNB or token amount
@@ -11,97 +21,50 @@ A decentralized lucky draw application built on the BNB Chain (BEP-20) that allo
 - Admin controls for drawing winners
 - Responsive design with modern UI
 - Toast notifications for user feedback
-- **Winner history** - View all past winners and their prizes
-- **Leaderboard** - See top participants with the most entries
-- **Auto-draw** - Automatic winner selection using Chainlink Keepers
-- **Multi-round draws** - Participate in consecutive rounds
-- **Participation NFTs** - Receive NFTs for each participation
-- **Token-based entry** - Use BEP-20 tokens instead of BNB
+- Winner history - View all past winners and their prizes
+- Leaderboard - See top participants with the most entries
+- Auto-draw - Automatic winner selection using Chainlink Keepers
+- Multi-round draws - Participate in consecutive rounds
+- Participation NFTs - Receive NFTs for each participation
 
-## Prerequisites
+## Tech Stack
 
-- Node.js (v14 or higher)
-- MetaMask wallet
-- BNB Chain network configured in MetaMask
-- Some BNB for gas fees and participation (or tokens if using token-based entry)
-- Chainlink VRF subscription
-- Chainlink Keeper for auto-draw functionality
+| Technology | Where it shows up |
+|---|---|
+| Solidity | Smart contracts |
+| OpenZeppelin | Smart-contract base contracts |
 
-## Setup
+## Project Architecture
 
-1. Clone the repository:
+Browser page → Solidity contract. The HTML references MetaMask.
+
+## Project Structure
+
+```text
+lucky-draw/
+├── contracts/
+├── src/
+```
+
+## Getting Started
+
 ```bash
-git clone <repository-url>
+git clone https://github.com/Bannysukumar/lucky-draw.git
 cd lucky-draw
 ```
 
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Configure the smart contract:
-   - Update the Chainlink VRF configuration in `contracts/LuckyDraw.sol`
-   - Set your desired entry fee, max participants, and deadline
-   - Configure auto-draw interval for Chainlink Keepers
-   - Set up token-based entry if desired
-   - Deploy the contract to BNB Chain testnet/mainnet
-
-4. Update the frontend configuration:
-   - Open `src/app.js`
-   - Replace `YOUR_CONTRACT_ADDRESS` with your deployed contract address
-   - Add your contract ABI to the `CONTRACT_ABI` array
-
-5. Start the development server:
-```bash
-npm start
-```
-
-## Smart Contract Configuration
-
-The smart contract uses the following parameters:
-- Entry Fee: Configurable (BNB or tokens)
-- Commission: 14%
-- Max Participants: Configurable
-- Deadline: Configurable
-- Auto-draw Interval: Configurable
-- Multi-round Support: Enabled by default
-- NFT Minting: Automatic for each participation
-
-## Usage
-
-1. Connect your MetaMask wallet
-2. Ensure you have enough BNB for gas fees and participation (or tokens if using token-based entry)
-3. Click "Enter Lucky Draw" to participate
-4. Wait for the draw deadline or max participants to be reached
-5. Winner is automatically selected (or admin can trigger manually)
-6. Winner automatically receives the prize pool (minus commission)
-7. View your participation NFTs in the "My NFTs" tab
-8. Check the leaderboard to see top participants
-9. View winner history in the "Winners" tab
-
-## Security
-
-- The contract uses Chainlink VRF for true randomness
-- Only the admin can trigger the winner selection manually
-- Participants can only enter once per round
-- Commission is automatically calculated and withheld
-- Chainlink Keepers ensure reliable auto-draw functionality
-
-## License
-
-MIT
-
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-<!-- readme-seo: bannysukumar -->
-
-## Open source
-
-This repository is open source and maintained by [Banny Sukumar](https://github.com/Bannysukumar). Lucky Draw is published so other developers can study the code and contribute.
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 
 ## License
 
-Released under the [MIT License](LICENSE). Copyright (c) 2026 Banny Sukumar. See [CONTRIBUTING.md](CONTRIBUTING.md) if you want to help.
+Licensed under MIT. See [LICENSE](LICENSE).
+
+## Author
+
+[Banny Sukumar](https://github.com/Bannysukumar)
+
+- GitHub: [@Bannysukumar](https://github.com/Bannysukumar)
+- Portfolio: [adepu-sukumar.vercel.app](https://adepu-sukumar.vercel.app/)
+- LinkedIn: [Adepu Sukumar](https://www.linkedin.com/in/adepu-sukumar-59b423351)
